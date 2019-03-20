@@ -1,2 +1,2 @@
 # SAG.WebApp
-# Created by Ermak Ivan & Dmitry Boris
+# Created by Berdnikau Yahor, Ermak Ivan & Dmitry Boris
