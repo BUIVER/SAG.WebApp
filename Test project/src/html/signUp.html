@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="container d-flex flex-column p-4">
+  <div class="panel d-flex flex-fill flex-column p-2 text-center">
+
+    
+      <h2 id="current-value"></h2>
+
+      <div>
+        <div class="m-4">
+            <input id="email" placeholder="Email">
+        </div>
+        <div class="m-4">
+          <input id="login" class="Login" placeholder="Login">
+        </div>
+        <div class="m-4">
+          <input type="password" id="password" placeholder="Password">
+        </div>
+        <button id="signup-btn" class="btn btn-primary">Sign up</button>
+      </div>
+      <div>
+          <p id="errorHandler" class="mb-5"></p>
+      </div>
+   </div>
+</div>
+
+<script src="https://api.backendless.com/sdk/js/latest/backendless.min.js"></script>
+<script src="../js/signUp.js"></script>
+</body>
+</html>
