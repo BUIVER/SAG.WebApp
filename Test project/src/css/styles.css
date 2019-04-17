@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+.container {
+    height: 100%;
+    max-width: 80%;
+}
+
+.panel {
+    background: #CCCCCC;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+}
