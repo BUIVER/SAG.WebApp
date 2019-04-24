@@ -9,7 +9,7 @@
   const $email = document.getElementById('email')
   const $login = document.getElementById('login')
   const $password = document.getElementById('password')
-  const $errorHandler = document.getElementById('errrorHandler')
+  const $errorHandler = document.getElementById('errorHandler')
 
 function signUp(){
     var user = new Backendless.User();
@@ -33,7 +33,7 @@ function gotError( err ) // see more on error handling
 {
   console.log( "error message - " + err.message );
   console.log( "error code - " + err.statusCode );
-  $errorHandler.value = err.message
+  $errorHandler.innerText = err.message
 }
   function addListener(){
       $signupBtn.addEventListener('click', signUp)
