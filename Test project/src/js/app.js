@@ -12,7 +12,8 @@
   const $createObjStatusMsg = document.getElementById('create-obj-status');
   const $modifierPanel = document.getElementById('modifier-panel');
   const $currentValue = document.getElementById('current-value');
-  const $input = document.getElementById('input');
+  const $login = document.getElementById('Login');
+  const $password = document.getElementById('Password');
   const $updateBtn = document.getElementById('update-btn');
   const $userTag = document.getElementById('current-user');
 
@@ -30,8 +31,16 @@
   }
 
   function createObject() {
+<<<<<<< HEAD
 
     return testTableStore.save({ foo: '' })
+=======
+    const object = {
+      login: $login.value,
+      password  :  $password.value
+    };
+    return testTableStore.save({object})
+>>>>>>> origin/develop
       .then(function (object) {
         $createObjStatusMsg.classList.add('text-success');
         $createObjStatusMsg.innerText = 'Object has been saved in real-time database';
@@ -47,7 +56,7 @@
   }
 
   function updateObjectValue(object) {
-    $currentValue.innerText = object.foo
+    $currentValue.innerText = object.login
   }
 
   function subscribeOnObjectChanges(object) {
@@ -74,8 +83,10 @@
     $userTag.innerText = user.name;
 
     function saveObject() {
-      object.foo = $input.value;
-
+      object.login = $login.value
+      object.password = $password.value;
+      $login.value = '';
+      $password.value = '';
       $input.value = '';
 
       testTableStore.save(object);

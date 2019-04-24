@@ -1,18 +1,242 @@
-html, body {
-    height: 100%;
+*{
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+}
+#FormSignIn{
+  display: grid;
+  /* grid-column-start: 1;
+  grid-column-end:2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+    z-index: 2; */
+}
+#FormSignUp{
+  display: none;
+}
+/* .passs{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 15%;
+  margin-right: 15%;
+} */
+/* .pas{
+  height: 100vh;
+  grid-column-start: 1;
+  grid-column-end:2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: grey;
+  z-index: 1;
+} */
+#SignInForm{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* border: 1px solid green; */
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: 3% 20% 10% 20%;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  background-color: #F8F8FF;
+}
+.SignIn{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 5px 15px 5px 15px;
+  background-color: #F8F8FF;
+}
+.SignInLoginText{
+  background-color: #F8F8FF;
+}
+.SignInPassText{
+  background-color: #F8F8FF;
+}
+.SignInLogin{
+  background-color: #F8F8FF;
+}
+.SignInPass{
+  background-color: #F8F8FF;
+}
+.Subm{
+  background-color: #F8F8FF;
+}
+.Regist{
+  background-color: #F8F8FF;
+}
+#SignUpForm{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* border: 1px solid green; */
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: 3% 20% 0% 20%;
+  padding: 10px 10px 10px 10px;
+  /* border: 1px solid black; */
+}
+.SignUp{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid black;
+  background-color: #F8F8FF;
+}
+.SignUpLoginText{
+  grid-row-start: 2;
+  background-color: #F8F8FF
+}
+.SignUpPassText{
+  grid-row-start: 3;
+  background-color: #F8F8FF;
+}
+.SignUpEmailText{
+  grid-row-start: 4;
+  background-color: #F8F8FF;
+}
+.SignUpLogin{
+  grid-row-start: 2;
+  background-color: #F8F8FF;
+}
+.SignUpPass{
+  grid-row-start: 3;
+  background-color: #F8F8FF;
+}
+.SignUpEmail{
+  grid-row-start: 4;
+  background-color: #F8F8FF;
+}
+#current-value{
+  grid-row-start: 1;
+  background-color: #F8F8FF;
+}
+#errorHandler{
+  grid-row-start: 5;
+  background-color: #F8F8FF;
+}
+.SubmRegistr{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.photoforheader{
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: 1fr;
+  /* background-color: red; */
+  /* bor  der: 1px solid red; */
+}
+.photo1{
+  /* background-color: red; */
+  background-image: url(../img/photo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo2{
+  background-image: url(../img/photo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo3{
+  background-image: url(../img/photo3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo4{
+  background-image: url(../img/photo4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo5{
+  background-image: url(../img/photo5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo6{
+  background-image: url(../img/photo6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo7{
+  background-image: url(../img/photo7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photo8{
+  background-image: url(../img/photo8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container{
+  display: grid;
+  grid-template-rows: 150px 70px 1fr 20px;
+  /* border: 2px double red; */
+  min-height: 100vh;
+  grid-row-gap: 3px;
+}
+.header{
+  display: grid;
+  /* grid-area: header; */
+  /* border: 1px solid black; */
+}
+.main{
+  /* grid-area: main; */
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  border: 1px solid black;
+}
+.newPac{
+  grid-row-start: 2;
+  grid-column-start: 6;
+}
+.exit{
+  grid-row-start: 1;
+  grid-column-start: 6;
+}
+.bottom{
+  /* grid-area: bottom; */
+  /* border: 1px solid black; */
+}
+.footer{
+  /* grid-area: footer; */
+  font-family: system-ui;
+  font-weight:50;
+  font-style:oblique;
+  font-size: smaller;
+  opacity:0.5;
+  text-align: right;
+  border: 1px solid black;
+}
+button,input {
+    color: #444444;
+    background: #F3F3F3;
+    border: 1px #DADADA solid;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 9pt;
+    outline: none;
+    width: 90%;
 }
 
-body {
-    background: #FFFFFF;
+button:hover {
+    border: 1px #C6C6C6 solid;
+    box-shadow: 1px 1px 1px #EAEAEA;
+    color: #333333;
+    background: #F7F7F7;
+}
+input:hover{
+  border: 1px #C6C6C6 solid;
+  box-shadow: 1px 1px 1px #EAEAEA;
+  color: #333333;
+  background: #F7F7F7;
 }
 
-.container {
-    height: 100%;
-    max-width: 80%;
-}
-
-.panel {
-    background: #CCCCCC;
-    border-radius: 3px;
-    border: 1px solid #CCCCCC;
+button:active {
+    box-shadow: inset 1px 1px 1px #DFDFDF;
 }
