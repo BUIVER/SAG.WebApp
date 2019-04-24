@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>SignIn/SignUp page</title>
   <meta charset="UTF-8"/>
-  <title>4th Regional Ambulance</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
   <link rel="stylesheet" href="../css/styles.css">
-
-  
+  <script type="text/javascript">
+  function showFunReg() {
+    document.getElementById("FormSignUp").style.display = 'grid';
+    document.getElementById("FormSignIn").style.display = 'none';
+  }
+  </script>
 </head>
 <body>
-
-<div class="container d-flex flex-column p-4">
-  <div class="text-center pb-4">
-    <a href="//backendless.com/" target="_blank">
-      <img width="250" height= "250" src="https://cs8.pikabu.ru/post_img/big/2017/03/13/5/1489387472194327410.jpg"/>
-    </a>
-  </div>
-  <div class="panel d-flex flex-fill flex-column p-2 text-center">
-	<div>
-      <div>
-      	<p>Username</p>
-      	<input id="username">
+  <a href="//backendless.com/" target="_blank" style="margin: 5% 20% 10% 40%;">
+    <img width="250" height= "250" src="https://cs8.pikabu.ru/post_img/big/2017/03/13/5/1489387472194327410.jpg"/>
+  </a>
+<!-- <div class="passs">
+<div class="pas"></div> -->
+<div id="FormSignIn">
+<form action="#" method="post">
+    <div id="SignInForm">
+      <div class="SignIn">
+        <span class="SignInLoginText">Login</span>
+        <span class="SignInLogin"><input type="text" name="login" placeholder="Input your login" id="login" pattern="[0-9a-zA-Z]{6,12}" style="width:90%;"></span>
+        <span class="SignInPassText">Password</span>
+        <span class="SignInPass"><input type="password" name="pass" placeholder="Input your password" id="password" pattern="[0-9a-zA-Z]{6,12}"style="width:90%;"></span>
       </div>
-      <div>
-      	<p>Password</p>
-      	<input type="password" id="password">
-      </div>
-      <div>
-      	<button id="signInButton">Log in</button>
-      </div>
-      <div>
-        <p id="log"></p>
-      </div>
+    <span class="Subm"><input type="submit" value="Sign in"></span>
+    <span class="Regist"><button type="button" onclick="showFunReg()">Sign up</button></span>
     </div>
-  </div>
+</form>
 </div>
-
+<!------------------------------------------------------------------------------------->
+<div id="FormSignUp">
+<form action="#" method="post">
+    <div id="SignUpForm">
+      <div class="SignUp">
+	  <h2 id="current-value"></h2>
+        <span class="SignUpLoginText">Login</span>
+        <span class="SignUpLogin"><input type="text" name="login" placeholder="Input your login" id="login" pattern="[0-9a-zA-Z]{6,12}"></span>
+        <span class="SignUpPassText">Password</span>
+        <span class="SignUpPass"><input type="password" name="pass" placeholder="Input your password" id="password" pattern="[0-9a-zA-Z]{6,12}"></span>
+        <span class="SignUpEmailText">Email</span>
+        <span class="SignUpEmail"><input type="email" name="mail" placeholder="Input email" id="email"></span>
+		<p id="errorHandler"></p>
+      </div>
+    <span class="SubmRegistr"><input type="submit" value="Sign Up" style="width=100%;margin-left:4%"></span>
+    </div>
+</form>
+</div>
+<!--------------------------------------------------------------------------------------->
+<!-- </div> -->
 <script src="https://api.backendless.com/sdk/js/latest/backendless.min.js"></script>
-<script src="../js/signin.js"></script>
+<script src="../js/signUp.js"></script>
 </body>
 </html>
-
-
-
-<!--
-	
--->

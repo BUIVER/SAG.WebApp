@@ -31,16 +31,7 @@
   }
 
   function createObject() {
-<<<<<<< HEAD
-
     return testTableStore.save({ foo: '' })
-=======
-    const object = {
-      login: $login.value,
-      password  :  $password.value
-    };
-    return testTableStore.save({object})
->>>>>>> origin/develop
       .then(function (object) {
         $createObjStatusMsg.classList.add('text-success');
         $createObjStatusMsg.innerText = 'Object has been saved in real-time database';
