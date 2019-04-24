@@ -40,4 +40,3 @@ function gotError( err ) // see more on error handling
   }
   addListener()
 })();
-                
