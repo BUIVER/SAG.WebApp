@@ -3,37 +3,94 @@
 <head>
   <meta charset="UTF-8"/>
   <title>4th Regional Ambulance</title>
-
-<!-- &#9990; -->
-
   <link rel="stylesheet" href="../css/styles.css">
+
+  <style media="screen">
+    body{
+      background-color: #FFFFFF;
+    }
+    input{
+      width: 95%;
+    }
+  </style>
+  <script>
+  function showFunReg() {
+    document.getElementById("container1").style.display = 'grid';
+    document.getElementById("container").style.display = 'none';
+  }
+  function showFunReg1() {
+    document.getElementById("container2").style.display = 'grid';
+    document.getElementById("container").style.display = 'none';
+  }
+  </script>
 </head>
 <body>
-<div class="container">
+  <div id="container">
+    <div class="callSymbol"><button type="button" name="button" style="font-size:125%; width:100%;" onclick="showFunReg1()">&#9990;</button></div>
+    <header class="header">
+      <div class="photoforheader">
+        <span class="photo1"></span>
+        <span class="photo2"></span>
+        <span class="photo3"></span>
+        <span class="photo4"></span>
+        <span class="photo5"></span>
+        <span class="photo6"></span>
+        <span class="photo7"></span>
+        <span class="photo8"></span>
+      </div>
+    </header>
+    <main class="main">
+      <span class="exit"><button style="height:100%;width:100%;" onclick="#">Сменить пользователя</button></span>
+      <span class="newPac"><button style="height:100%;width:100%;" onclick="showFunReg()">&#11015; Записаться на прием &#11015;</button></span>
+    </main>
+    <aside class="bottom">
+      <div class="preitem">
+        <span class="fio_pat">ФИО</span>
+        <span class="date_pat">Дата приема</span>
+        <span class="telef_pat">Телефон</span>
+        <span class="adress_pat">Адрес</span>
+        <span class="doc_pat">Врач</span>
+      </div>
+      <div class="_item_">
+        <span class="fio_pat">ФИО</span>
+        <span class="date_pat">Дата приема</span>
+        <span class="telef_pat">Телефон</span>
+        <span class="adress_pat">Адрес</span>
+        <span class="doc_pat">Врач</span>
+      </div>
+    </aside>
+    <footer class="footer">Нерушев | Бердников | Ермак | Борис</footer>
 
-  <header class="header">
-    <div class="photoforheader">
-      <span class="photo1"></span>
-      <span class="photo2"></span>
-      <span class="photo3"></span>
-      <span class="photo4"></span>
-      <span class="photo5"></span>
-      <span class="photo6"></span>
-      <span class="photo7"></span>
-      <span class="photo8"></span>
-    </div>
-  </header>
-  <main class="main">
-      <span class="exit"><button style="height:100%;width:100%;">Сменить пользователя</button></span>
-      <span class="newPac"><button style="height:100%;width:100%;">&#11015; Записаться на прием &#11015;</button></span>
-  </main>
-  <aside class="bottom"></aside>
-  <footer class="footer">Нерушев | Бердников | Ермак | Борис</footer>
+  </div>
+  <div id="container1">
+        <form class="formOfCalls" action="#" method="post">
+          <span class="spn"> <input type="text" name="name" value="" placeholder="Your name" pattern="[0-9a-zA-Z]{1,50}"> </span>
+          <span class="spn"> <input type="text" name="surname" value="" placeholder="Your surname" pattern="[0-9a-zA-Z]{1,50}"> </span>
+          <span class="spn"> <input type="text" name="patronymic" value="" placeholder="Your patronymic" pattern="[0-9a-zA-Z]{1,50}"> </span>
+          <span class="spn"> Укажите врача</span>
+          <span class="spn">
+            <select>
+              <option value="Doctor_1">Врач 1</option>
+              <option value="Doctor_2">Врач 2</option>
+              <option value="Doctor_3">Врач 3</option>
+            </select>
+          </span>
+          <span class="spn"> <input type="text" name="phone" value="" placeholder="Your phone number"> </span>
+          <span style="margin-left:10%;margin-right:10%; background-color:aqua;"> КАРТА С ПОМЕТКОЙ НАХОЖДЕНИЯ ПОЛИКЛИНИКИ </span>
+          <span style="margin-right: 30%;margin-left:30%;"> <input type="submit" name="" value="Записаться на прием"> </span>
+        </form>
+  </div>
+  <div id="container2">
+        <form class="formOfCallsIn" action="#" method="post">
+          <span class="spn"><input type="text" name="reasonForCall" value="" placeholder="Reason"></span>
+          <span class="spn"><input type="text" name="phone" value="" placeholder="Address"></span>
+          <span style="margin-left:10%;margin-right:10%; background-color:aqua;"> КАРТА ПОЗВОЛЯЮЩАЯ ВЫБРАТЬ МЕСТО ПРИЕЗДА СКОРОЙ </span>
+          <span style="margin-right: 30%;margin-left:30%;"> <input type="submit" name="" value="Вызвать врачей на дом"> </span>
+        </form>
+  </div>
 
-</div>
-
-<script src="https://api.backendless.com/sdk/js/latest/backendless.min.js"></script>
-<script src="../js/app.js"></script>
-<!-- <script src="../js/signUp.js"></script> -->
+  <script src="https://api.backendless.com/sdk/js/latest/backendless.min.js"></script>
+  <script src="../js/app.js"></script>
+  <!-- <script src="../js/signUp.js"></script> -->
 </body>
 </html>
