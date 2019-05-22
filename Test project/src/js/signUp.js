@@ -7,15 +7,17 @@
 
   const $signupBtn = document.getElementById('signup-btn');
   const $email = document.getElementById('email')
-  const $login = document.getElementById('login')
-  const $password = document.getElementById('password')
+  const $login = document.getElementById('su_login')
+  const $password = document.getElementById('su_password')
   const $errorHandler = document.getElementById('errrorHandler')
 
 function signUp(){
+    console.log("breakpoint 1")
     var user = new Backendless.User();
     user.email = $email.value;
     user.password = $password.value;
     user.name = $login.value
+    console.log("username and password were read")
     Backendless.UserService.register( user )
     .then( function( registeredUser ) {
         userRegistered(registeredUser)
@@ -36,7 +38,9 @@ function gotError( err ) // see more on error handling
   $errorHandler.value = err.message
 }
   function addListener(){
+      console.log('s')
       $signupBtn.addEventListener('click', signUp)
+      console.log("onClick added")
   }
   addListener()
 })();
