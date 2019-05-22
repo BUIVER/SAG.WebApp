@@ -25,6 +25,7 @@
   </script>
 </head>
 <body>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<e42dc256-44cc-4d77-8d22-79c9fa0fbfe3>" type="text/javascript"></script>
   <div id="container">
     <div class="callSymbol"><button type="button" name="button" style="font-size:125%; width:100%;" onclick="showFunReg1()">&#9990;</button></div>
     <header class="header">
@@ -62,6 +63,7 @@
     <footer class="footer">Нерушев | Бердников | Ермак | Борис</footer>
 
   </div>
+  
   <div id="container1">
         <form class="formOfCalls" action="#" method="post">
           <span class="spn"> <input type="text" name="name" value="" placeholder="Your name" pattern="[0-9a-zA-Z]{1,50}"> </span>
@@ -76,21 +78,20 @@
             </select>
           </span>
           <span class="spn"> <input type="text" name="phone" value="" placeholder="Your phone number"> </span>
-          <span style="margin-left:10%;margin-right:10%; background-color:aqua;"> КАРТА С ПОМЕТКОЙ НАХОЖДЕНИЯ ПОЛИКЛИНИКИ </span>
           <span style="margin-right: 30%;margin-left:30%;"> <input type="submit" name="" value="Записаться на прием"> </span>
         </form>
   </div>
   <div id="container2">
         <form class="formOfCallsIn" action="#" method="post">
           <span class="spn"><input type="text" name="reasonForCall" value="" placeholder="Reason"></span>
-          <span class="spn"><input type="text" name="phone" value="" placeholder="Address"></span>
-          <span style="margin-left:10%;margin-right:10%; background-color:aqua;"> КАРТА ПОЗВОЛЯЮЩАЯ ВЫБРАТЬ МЕСТО ПРИЕЗДА СКОРОЙ </span>
+          <span class="spn"><input type="text" name="address" id="address" value="" placeholder="Address"></span>
+          <div id="map" style="width: 600px;height: 600px;"></div>
           <span style="margin-right: 30%;margin-left:30%;"> <input type="submit" name="" value="Вызвать врачей на дом"> </span>
         </form>
   </div>
 
   <script src="https://api.backendless.com/sdk/js/latest/backendless.min.js"></script>
   <script src="../js/app.js"></script>
-  <!-- <script src="../js/signUp.js"></script> -->
+  <script src="../js/firstMap.js"></script>
 </body>
 </html>
