@@ -6,13 +6,12 @@ const API_KEY = 'AEBF1473-2F6B-21F8-FF14-857162D9E400';
 Backendless.serverURL = 'https://api.backendless.com';
 Backendless.initApp(APP_ID, API_KEY);
 
-const $login = document.getElementById('username');
-const $password = document.getElementById('password');
-const $signInButton = document.getElementById('signInButton');
+const $login = document.getElementById('si_login');
+const $password = document.getElementById('si_password');
+const $signInButton = document.getElementById('signin-btn');
 
 console.log("CP1") //console checkpoint 
-
-	function signIn() {
+function signIn() {
 	var login = $login.value;
 	var password = $password.value;
 
