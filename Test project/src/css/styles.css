@@ -322,13 +322,13 @@ select{
 #_item_{
   display: none;
   grid-template-rows: 40px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid black;
 }
 #preitem{
   display: none;
   grid-template-rows: 40px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid black;
 }
 .fio_pat{
